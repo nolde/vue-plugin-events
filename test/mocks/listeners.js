@@ -1,6 +1,6 @@
 module.exports = {
 
-  createNormal (eventName, defaultValue = 'immediate') {
+  createNormal (eventName, defaultValue = 'normal') {
     return {
       name: 'normal',
       render (h) {
@@ -41,7 +41,7 @@ module.exports = {
     }
   },
 
-  createOnce (eventName, defaultValue = 'immediate') {
+  createOnce (eventName, defaultValue = 'once') {
     return {
       name: 'once',
       render (h) {

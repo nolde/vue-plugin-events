@@ -3,19 +3,23 @@ export default class VueEventBus {
     this._bus = new Vue()
   }
 
-  emit (name, ...args) {
-    this._bus.$emit(name, ...args)
+  emit (event, ...args) {
+    this._bus.$emit(event, ...args)
   }
 
-  on (name, callback) {
-    this._bus.$on(name, callback)
+  on (event, callback) {
+    this._bus.$on(event, callback)
   }
 
-  once (name, callback) {
-    this._bus.$once(name, callback)
+  once (event, callback) {
+    this._bus.$once(event, callback)
   }
 
-  off (name, callback) {
-    this._bus.$off(name, callback)
+  off (event, callback) {
+    if (event && callback) {
+      this._bus.$off(event, callback)
+    } else {
+      console.warn(`[vue-plugin-events] "$events.off" can only be used with event and callback`)
+    }
   }
 }
