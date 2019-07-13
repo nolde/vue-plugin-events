@@ -2,7 +2,6 @@ const test = require('tape')
 const sinon = require('sinon')
 
 const createLoader = require('../mocks/createLoader')
-const createEmitter = require('../mocks/createEmitter')
 const { createNormal, createImmediate, createOnce } = require('../mocks/listeners')
 
 // ////////////////////////////////////

@@ -39,7 +39,7 @@ function setupHandler (vm, name, handler) {
       break
     }
     default: {
-      console.warn(`[vue-plugin-events] Event handler "${event}" is invalid.`)
+      console.warn(`[vue-plugin-events] Event handler "${name}" is invalid.`)
       break
     }
   }
@@ -54,7 +54,7 @@ function setupFunction (vm, name, handler, busMethod) {
 
 function setupString (vm, name, handler, busMethod) {
   if (!vm[handler]) {
-    console.warn(`[vue-plugin-events] Event handler "${event}" is set to inexistent method "${handler}".`)
+    console.warn(`[vue-plugin-events] Event handler "${name}" is set to inexistent method "${handler}".`)
     return null
   }
   let callback = vm[handler].bind(vm)
@@ -72,7 +72,7 @@ function setupOptionsHandler (vm, name, handler, once) {
       return setupString(vm, name, handler, (once && 'once') || 'on')
     }
     default: {
-      console.warn(`[vue-plugin-events] Event handler "${event}" is invalid.`)
+      console.warn(`[vue-plugin-events] Event handler "${name}" is invalid.`)
       return null
     }
   }
@@ -86,5 +86,5 @@ function setupObject (vm, name, options) {
     }
     return callback
   }
-  console.warn(`[vue-plugin-events] Event handler "${event}" is invalid (no handler found).`)
+  console.warn(`[vue-plugin-events] Event handler "${name}" is invalid (no handler found).`)
 }

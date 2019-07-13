@@ -6,5 +6,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 const version = '__VERSION__'
-export { VueEvents, version }
+export { version }
 export default VueEvents
