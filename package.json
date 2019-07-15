@@ -7,7 +7,8 @@
   "module": "dist/vue-plugin-events.esm.js",
   "browser": "dist/vue-plugin-events.umd.js",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build": "rollup -c",

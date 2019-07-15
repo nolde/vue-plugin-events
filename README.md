@@ -1,13 +1,13 @@
 Vue.js Events Plugin
 ====================
 
-[![npm](https://img.shields.io/npm/v/vue-plugin-events.svg)](https://www.npmjs.com/package/vue-plugin-events)
-[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
-[![build](https://travis-ci.com/nolde/vue-plugin-events.svg?branch=master)](https://travis-ci.com/nolde/vue-plugin-events)
-[![size](https://packagephobia.now.sh/badge?p=vue-plugin-events)](https://packagephobia.now.sh/result?p=vue-plugin-events)
-[![standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
+[![npm version](https://img.shields.io/npm/v/vue-plugin-events.svg)](https://www.npmjs.com/package/vue-plugin-events)
+[![vue 2.x](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![build status](https://img.shields.io/circleci/build/gh/nolde/vue-plugin-events/master.svg)](https://circleci.com/gh/nolde/vue-plugin-events)
+[![minzipped size](https://badgen.net/bundlephobia/minzip/vue-plugin-events)](https://bundlephobia.com/result?p=vue-plugin-events)
+[![code style: standard + prettier](https://img.shields.io/badge/code%20style-standard%20%2B%20prettier-ff69b4.svg)](https://standardjs.com/)
 
-Simple global event bus for Vue.js applications with automatic subscription control.
+> Simple global event bus for Vue.js applications with automatic subscription control. Zero dependencies.
 
 ----------------
 
@@ -43,10 +43,10 @@ Vue.use(VueEvents)
 ```html
 <!-- Include after Vue -->
 <!-- Local files -->
-<script src="vue-plugin-events/dist/vue-plugin-events.js"></script>
+<script src="vue-plugin-events/dist/vue-plugin-events.umd.js"></script>
 
 <!-- From CDN -->
-<script src="https://unpkg.com/vue-plugin-events"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-plugin-events"></script>
 ```
 
 Usage
