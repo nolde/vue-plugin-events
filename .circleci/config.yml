@@ -25,3 +25,6 @@ workflows:
       - release:
           requires:
             - run_tests
+          filters:
+            branches:
+              only: master
