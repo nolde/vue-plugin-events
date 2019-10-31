@@ -1,11 +1,11 @@
 Vue.js Events Plugin
 ====================
 
-[![npm version](https://img.shields.io/npm/v/vue-plugin-events.svg)](https://www.npmjs.com/package/vue-plugin-events)
-[![vue 2.x](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
-[![build status](https://img.shields.io/circleci/build/gh/nolde/vue-plugin-events/master.svg)](https://circleci.com/gh/nolde/vue-plugin-events)
-[![minzipped size](https://badgen.net/bundlephobia/minzip/vue-plugin-events)](https://bundlephobia.com/result?p=vue-plugin-events)
-[![code style: standard + prettier](https://img.shields.io/badge/code%20style-standard%20%2B%20prettier-ff69b4.svg)](https://standardjs.com/)
+[![npm version](https://img.shields.io/npm/v/vue-plugin-events.svg?style=flat-square)](https://www.npmjs.com/package/vue-plugin-events)
+[![vue 2.x](https://img.shields.io/badge/vue-2.x-darkgreen.svg?style=flat-square)](https://vuejs.org/)
+[![build status](https://img.shields.io/circleci/build/gh/nolde/vue-plugin-events/master.svg?style=flat-square)](https://circleci.com/gh/nolde/vue-plugin-events)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/vue-plugin-events?style=flat-square)](https://bundlephobia.com/result?p=vue-plugin-events)
+[![code style: standard + prettier](https://img.shields.io/badge/code%20style-standard%20%2B%20prettier-ff69b4.svg?style=flat-square)](https://standardjs.com/)
 
 > Simple global event bus for Vue.js applications with automatic subscription control. Zero dependencies.
 
@@ -18,7 +18,7 @@ Vue.js Events Plugin
 - [Usage](#usage)
     + [Listening to Events](#listening-to-events)
     + [Emitting Events](#emitting-events)
-    + [API (`$events`)](#api-events)
+- [API (`$events`)](#api-events)
 - [License](#license)
 
 ----------------
@@ -54,7 +54,7 @@ Usage
 
 ### Listening to Events
 
-The plugin will automatically subscribe a component to events defined within its body. That is achieved using a new section named `events`. When your component is destroyed, so are any listeners that have been automatically created.
+The plugin will automatically subscribe a component to events defined within its body. This is achieved using a new section named `events`. When your component is destroyed, so are any listeners that have been automatically created.
 
 The handlers follow a pattern similar to component [`watch`](https://vuejs.org/v2/api/#watch) section.
 
@@ -119,7 +119,8 @@ export default {
 }
 ```
 
-### API (`$events`)
+API (`$events`)
+---------------
 
 #### __`.emit`__
 + __Arguments__
@@ -133,7 +134,7 @@ export default {
     * `{string | Array<string>} event` (array only supported in Vue 2.2.0+)
     * `{Function} callback`
 + __Usage__
-    * Listens for an event in the global event bus. Normally, it is easier to allow the plugin to control the subscription of events. However, if needed in a special case, you can still manually listen for an event; just keep in mind that **the plugin does not track manual subscriptions**, so you mjust emember to unsubscribe when the component is destroyed, of the handler is no longer needed. The callback will receive all the additional arguments passed into the event-triggering method.
+    * Listens for an event in the global event bus. Normally, it is easier to allow the plugin to control the subscription of events. However, special cases do exist, so you can manually listen for an event if need be; just keep in mind that **the plugin does not track manual subscriptions**, so you must remember to unsubscribe before the component is destroyed. The callback will receive all the additional arguments passed into the event-triggering method.
 
 #### __`.once`__
 + __Arguments__
