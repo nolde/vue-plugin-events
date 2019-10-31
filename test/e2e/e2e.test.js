@@ -22,7 +22,7 @@ test(`plugin should add $events to Vue's prototype`, function (t) {
 
 test('plugin should support multiple different listeners', function (t) {
   const eventName = 'awesome'
-  let payload00 = 'straight away'
+  const payload00 = 'straight away'
   const components = [
     createNormal(eventName, payload00),
     createImmediate(eventName, payload00),

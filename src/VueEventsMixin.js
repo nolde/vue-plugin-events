@@ -46,7 +46,7 @@ function setupHandler (vm, name, handler) {
 }
 
 function setupFunction (vm, name, handler, busMethod) {
-  let callback = handler.bind(vm)
+  const callback = handler.bind(vm)
   vm._eventTracker[name] = callback
   vm.$events[busMethod](name, callback)
   return callback
@@ -57,7 +57,7 @@ function setupString (vm, name, handler, busMethod) {
     console.warn(`[vue-plugin-events] Event handler "${name}" is set to inexistent method "${handler}".`)
     return null
   }
-  let callback = vm[handler].bind(vm)
+  const callback = vm[handler].bind(vm)
   vm._eventTracker[name] = callback
   vm.$events[busMethod](name, callback)
   return callback
@@ -80,7 +80,7 @@ function setupOptionsHandler (vm, name, handler, once) {
 
 function setupObject (vm, name, options) {
   if (options.handler) {
-    let callback = setupOptionsHandler(vm, name, options.handler, Boolean(options.once))
+    const callback = setupOptionsHandler(vm, name, options.handler, Boolean(options.once))
     if (callback && options.immediate) {
       callback()
     }
